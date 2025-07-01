@@ -71,7 +71,7 @@ Once the application launches, click the "Upload Slit-Lamp Image" button to sele
 ```
 .
 ├── interface.py          
-├── main.py             
+├── backend.py             
 ├── eye_disease_classifier.pkl  
 ├── eye_disease_classifier_tfmodel.keras 
 ```
@@ -80,7 +80,7 @@ Once the application launches, click the "Upload Slit-Lamp Image" button to sele
 
 The classification pipeline consists of two main stages:
 
-1.  **Feature Extraction:** A pre-trained TensorFlow/Keras model (`eye_disease_classifier_tfmodel.keras`) is used to extract high-level features from the preprocessed slit-lamp images. This model acts as a powerful feature extractor, converting raw image data into a numerical representation suitable for traditional machine learning algorithms.
+1.  **Feature Extraction:** A trained TensorFlow/Keras model (`eye_disease_classifier_tfmodel.keras`) is used to extract high-level features from the preprocessed slit-lamp images. This model acts as a powerful feature extractor, converting raw image data into a numerical representation suitable for traditional machine learning algorithms.
 2.  **Classification:** The extracted features are then fed into an XGBoost classifier (`eye_disease_classifier.pkl`). XGBoost, an ensemble learning method, is highly effective for classification tasks and provides robust predictions based on the features. The model also includes logic for confidence thresholds and category-specific probability checks.
 
 ### Image Preprocessing
